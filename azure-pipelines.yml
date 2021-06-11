@@ -48,10 +48,23 @@ stages:
         sonarQubeRunAnalysis: true
         isJacocoCoverageReportXML: true
         sqMavenPluginVersionChoice: 'latest'
-    - task: SonarCloudAnalyze@1
     - task: SonarCloudPublish@1
       inputs:
         pollingTimeoutSec: '300'
+    - task: ArtifactoryGenericUpload@2
+      inputs:
+        artifactoryService: 'Jfrog Artifactory'
+        specSource: 'taskConfiguration'
+        fileSpec: |
+          {
+            "files": [
+              {
+                "pattern": "/target/**/*.jar",
+                "target": "/springboot-libs-snapshot-local/"
+              }
+            ]
+          }
+        failNoOp: true
     - task: CopyFiles@2
       inputs:
         Contents: '**/*.jar'
