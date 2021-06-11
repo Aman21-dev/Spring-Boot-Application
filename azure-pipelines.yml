@@ -21,6 +21,17 @@ stages:
     pool:
       vmImage: $(vmImageName)
     steps:
+    - task: SonarCloudPrepare@1
+      inputs:
+        SonarCloud: 'SonarCloud'
+        organization: 'devopsjava21'
+        scannerMode: 'Other'
+        extraProperties: |
+          # Additional properties that will be passed to the scanner,
+          # Put one key=value per line, example:
+          # sonar.exclusions=**/*.bin
+          sonar.projectKey=devopsjava21_Hello-World
+          sonar.projectName=Hello-World
     - task: Maven@3
       inputs:
         mavenPomFile: 'pom.xml'
