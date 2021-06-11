@@ -59,7 +59,7 @@ stages:
           {
             "files": [
               {
-                "pattern": "/target/**/*.jar",
+                "pattern": "target/**/*.jar",
                 "target": "/springboot-libs-snapshot-local/"
               }
             ]
