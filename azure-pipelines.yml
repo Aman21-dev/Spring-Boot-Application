@@ -59,8 +59,8 @@ stages:
           {
             "files": [
               {
-                "pattern": "target/**/*.jar",
-                "target": "/springboot-libs-snapshot-local/"
+                "pattern": "**/*.jar",
+                "target": "springboot-generic-local/"
               }
             ]
           }
