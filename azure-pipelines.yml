@@ -59,7 +59,7 @@ stages:
           {
             "files": [
               {
-                "pattern": "./target/*.jar",
+                "pattern": "**/*.jar",
                 "target": "springboot-generic-local/"
               }
             ]
@@ -67,7 +67,7 @@ stages:
         failNoOp: true
     - task: CopyFiles@2
       inputs:
-        Contents: './target/*.jar'
+        Contents: '**/*.jar'
         TargetFolder: '$(build.artifactstagingdirectory)'
     - task: PublishBuildArtifacts@1
       inputs:
