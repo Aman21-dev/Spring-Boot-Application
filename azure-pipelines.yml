@@ -67,9 +67,7 @@ stages:
         failNoOp: true
     - task: CopyFiles@2
       inputs:
-        Contents: |
-          **/*.jar
-          **/*.json
+        Contents: '**/*.jar'
         TargetFolder: '$(build.artifactstagingdirectory)'
         CleanTargetFolder: true
         OverWrite: true
