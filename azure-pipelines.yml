@@ -51,6 +51,7 @@ stages:
     - task: SonarCloudPublish@1
       inputs:
         pollingTimeoutSec: '300'
+      enabled: false
     - task: ArtifactoryGenericUpload@2
       inputs:
         artifactoryService: 'Jfrog Artifactory'
@@ -65,17 +66,20 @@ stages:
             ]
           }
         failNoOp: true
+      enabled: false
     - task: CopyFiles@2
       inputs:
         Contents: '**/*.jar'
         TargetFolder: '$(build.artifactstagingdirectory)'
         CleanTargetFolder: true
         OverWrite: true
+      
     - task: PublishBuildArtifacts@1
       inputs:
         PathtoPublish: '$(Build.ArtifactStagingDirectory)'
         ArtifactName: 'artifacts'
         publishLocation: 'Container'
+      
 
 
 
