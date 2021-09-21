@@ -70,10 +70,11 @@
 						<goals>
 							<goal>install</goal>
 						</goals>
-					</execution>
-					<configuration>
+											<configuration>
         <finalName>myJar</finalName>                   
     </configuration>
+					</execution>
+
 				</executions>
 			</plugin>
 		</plugins>
