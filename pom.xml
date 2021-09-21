@@ -28,6 +28,31 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+	<distributionManagement>
+    <repository>
+      	<repository>
+  <id>Test</id>
+  <url>https://pkgs.dev.azure.com/devopsjava21/Hello-World/_packaging/Test/maven/v1</url>
+  <releases>
+    <enabled>true</enabled>
+  </releases>
+  <snapshots>
+    <enabled>true</enabled>
+  </snapshots>
+</repository>
+</distributionManagement> 
+	<repositories>
+		<repository>
+  <id>Test</id>
+  <url>https://pkgs.dev.azure.com/devopsjava21/Hello-World/_packaging/Test/maven/v1</url>
+  <releases>
+    <enabled>true</enabled>
+  </releases>
+  <snapshots>
+    <enabled>true</enabled>
+  </snapshots>
+</repository>
+</repositories>
 
 	<build>
 		<plugins>
