@@ -72,8 +72,8 @@
 						</goals>
 					</execution>
 					<configuration>
-						<finalName>aman</finalName>
-					</configuration>
+        <finalName>myJar</finalName>                   
+    </configuration>
 				</executions>
 			</plugin>
 		</plugins>
