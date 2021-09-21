@@ -36,7 +36,7 @@ stages:
     - task: Maven@3
       inputs:
         mavenPomFile: 'pom.xml'
-        goals: 'install -Dfile=aman.jar deploy'
+        goals: 'mvn install:install-file -Dfile=your-artifact-1.0.jar'
         options: '-s settings.xml'
         publishJUnitResults: false
         javaHomeOption: 'JDKVersion'
