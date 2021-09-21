@@ -62,7 +62,7 @@
 					<executions>
 						<execution>
 							<goals>
-								<goal>default-install</goal>
+								<goal>install</goal>
 							</goals>
 							<configuration>
 								<finalName>hello-world</finalName>
