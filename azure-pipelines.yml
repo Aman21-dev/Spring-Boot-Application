@@ -35,19 +35,16 @@ stages:
     - task: Maven@3
       inputs:
         mavenPomFile: 'pom.xml'
-        publishJUnitResults: true
-        testResultsFiles: '**/surefire-reports/TEST-*.xml'
-        codeCoverageToolOption: 'JaCoCo'
-        codeCoverageFailIfEmpty: true
+        goals: 'package deploy'
+        options: '-s settings.xml'
+        publishJUnitResults: false
         javaHomeOption: 'JDKVersion'
         jdkVersionOption: '1.11'
         mavenVersionOption: 'Default'
         mavenOptions: '-Xmx3072m'
         mavenAuthenticateFeed: false
         effectivePomSkip: false
-        sonarQubeRunAnalysis: true
-        isJacocoCoverageReportXML: true
-        sqMavenPluginVersionChoice: 'latest'
+        sonarQubeRunAnalysis: false
     - task: SonarCloudPublish@1
       inputs:
         pollingTimeoutSec: '300'
