@@ -36,7 +36,6 @@ stages:
     - task: Maven@3
       inputs:
         mavenPomFile: 'pom.xml'
-        goals: 'pacakage'
         options: '-s settings.xml'
         publishJUnitResults: false
         javaHomeOption: 'JDKVersion'
