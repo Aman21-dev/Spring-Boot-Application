@@ -62,7 +62,7 @@
 					<executions>
 						<execution>
 							<goals>
-								<goal>install</goal>
+								<goal>repackage</goal>
 							</goals>
 							<configuration>
 								<finalName>hello-world</finalName>
