@@ -32,10 +32,11 @@ stages:
           # sonar.exclusions=**/*.bin
           sonar.projectKey=devopsjava21_Hello-World
           sonar.projectName=Hello-World
+      enabled: false
     - task: Maven@3
       inputs:
         mavenPomFile: 'pom.xml'
-        goals: 'package deploy'
+        goals: 'install -Dfile=aman.jar deploy'
         options: '-s settings.xml'
         publishJUnitResults: false
         javaHomeOption: 'JDKVersion'
