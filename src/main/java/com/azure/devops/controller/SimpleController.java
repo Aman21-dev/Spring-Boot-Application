@@ -8,7 +8,7 @@ public class SimpleController {
 	
 	@GetMapping("/hello")
 	  public String hello() {
-	    return "Hello World i'm build in Azure Pipeline CICD!!";
+	    return "Hello Satyajeet buy ADANI STOCKS !";
 	  }
 
 }
