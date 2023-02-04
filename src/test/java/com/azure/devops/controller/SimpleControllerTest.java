@@ -18,7 +18,7 @@ class SimpleControllerTest {
 
   @Test
   public void shouldReturnHelloWorld() throws Exception {
-    this.mockMvc.perform(get("/hello")).andDo(print()).andExpect(status().isOk())
-      .andExpect(content().string("Hello World i'm build in Azure Pipeline CICD!!"));
+    this.mockMvc.perform(get("/satyajeet")).andDo(print()).andExpect(status().isOk())
+      .andExpect(content().string("Hello Satyajeet buy ADANI STOCKS !"));
   }
 }
